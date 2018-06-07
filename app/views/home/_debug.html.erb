@@ -1,0 +1,47 @@
+<% #http://guides.rubyonrails.org/debugging_rails_applications.html %>
+<% if Rails.env.development? %>
+  <hr/>
+  <div class="container">
+    <div class="bs-docs-section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="debug">
+            <a href="#" onclick="$('#debug .debug_info').hide();$('#params_debug_info').show();return false">
+              params
+            </a>
+            |
+            <a href="#" onclick="$('#debug .debug_info').hide();$('#session_debug_info').show();return false">
+              session
+            </a>
+            |
+            <a href="#" onclick="$('#debug .debug_info').hide();$('#env_debug_info').show();return false">
+              env
+            </a>
+            |
+            <a href="#" onclick="$('#debug .debug_info').hide();$('#request_debug_info').show();return false">
+              request
+            </a>
+            <fieldset class="debug_info" id="params_debug_info" style="display: none">
+              <legend>params</legend>
+              <!--= debug(params)
+              -->
+              <%= debug(JSON.pretty_generate(params.to_h)) %>
+            </fieldset>
+            <fieldset class="debug_info" id="session_debug_info" style="display: none">
+              <legend>session</legend>
+              <%= debug(session.to_hash) %>
+            </fieldset>
+            <fieldset class="debug_info" id="env_debug_info" style="display: none">
+              <legend>env</legend>
+              <%= debug(JSON.pretty_generate(request.env.to_h)) %>
+            </fieldset>
+            <fieldset class="debug_info" id="request_debug_info" style="display: none">
+              <legend>request</legend>
+              <%= debug(JSON.pretty_generate(request.env.to_hash)) %>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

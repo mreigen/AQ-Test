@@ -1,0 +1,58 @@
+<!-- Menu
+-->
+<div class="nav-container">
+  <ul class="nav">
+    <li>
+      <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+        My Account
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to_unless_current "My Account", "/edit_registration" %>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <%= link_to_unless_current "#{current_user.email}", edit_user_password_path %>
+          </li>
+          <li>
+            <a href="/sign_out">Sign Out</a>
+          </li>
+        <% else %>
+          <li>
+            <a href="/sign_in">Sign In</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="/sign_up">Register  </a>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a href="/">Pages</a>
+      <ul class="dropdown">
+        <li>
+          <a href="/pages/portfolio-single">Single Item #1</a>
+        </li>
+        <li>
+          <a href="/pages/portfolio-single-2">Single Item #2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div class="copyright"><%= Time.now.year + 1 %> All rights reserved.</div>
+  <div class="exit"></div>
+  <ul class="social">
+    <li>
+      <a class="fa fa-twitter" href="#"></a>
+    </li>
+    <li>
+      <a class="fa fa-facebook" href="#"></a>
+    </li>
+    <li>
+      <a class="fa fa-instagram" href="#"></a>
+    </li>
+  </ul>
+</div>

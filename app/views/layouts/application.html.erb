@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <title>AdQuick Test</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="body-overlay"></div>
+    <%= render 'home/nav' %>
+    <!-- Wrapper
+    -->
+    <div class="container-fluid smooth-transition" id="wrapper">
+      <!-- Header
+      -->
+      <header>
+        <div class="container dark-brand">
+          <!-- Branding
+          -->
+          <a class="brand" href="/">
+            <%= image_tag "https://adquick.com/assets/logo-1d6a51c66c78b7af1a6f683092f4377383cb2139526d4a3492925d7c66db09c0.png", class: "dark-brand" %>
+            <%= image_tag "http://https://adquick.com/assets/logo-1d6a51c66c78b7af1a6f683092f4377383cb2139526d4a3492925d7c66db09c0.png", class: "light-brand" %>
+          </a>
+          <!-- Menu
+          -->
+          <div class="menu"></div>
+        </div>
+      </header>
+      <section class="page-wrap container">
+        <div class="row">
+          <div class="col-lg-12">
+            <%= yield %>
+          </div>
+        </div>
+      </section>
+      <!-- Footer
+      -->
+      <%= render 'home/footer' %>
+    </div>
+    <!-- Note: app/javascripts/application.js also contains vendor libraries
+    -->
+    <%= javascript_include_tag "modules/tera-slider/tera-slider" %>
+    <%= javascript_include_tag "javascripts/functions" %>
+  </body>
+</html>
