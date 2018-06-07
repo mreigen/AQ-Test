@@ -560,6 +560,10 @@ h1 span.right, h2 span.right, h3 span.right, h4 span.right, h5 span.right, h6 sp
   opacity: 0;
 }
 
+.brand img {
+  margin: 0px;
+}
+
 .nav-container .exit {
   cursor: pointer;
   position: absolute;
