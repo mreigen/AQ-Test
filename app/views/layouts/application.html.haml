@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Boilerplate Rails 5
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body 
+   
+    .body-overlay
+    
+    = render 'home/nav'
+
+    / Wrapper
+    #wrapper.container-fluid.smooth-transition
+      / Header
+      %header
+        .container.dark-brand
+          / Branding
+          %a.brand{:href => "/"}
+            =image_tag "http://placehold.it/175x50", class: "dark-brand"
+            =image_tag "http://placehold.it/175x50", class: "light-brand"
+          / Menu
+          .menu
+
+      %section.page-wrap.container
+        .row
+          .col-lg-12
+            = yield
+    
+      / Footer
+      = render 'home/footer'
+      
+    / Note: app/javascripts/application.js also contains vendor libraries
+    = javascript_include_tag "modules/tera-slider/tera-slider"
+    = javascript_include_tag "javascripts/functions"

@@ -1,0 +1,45 @@
+/ Hero & Tera Slider
+%section.slider
+  %ul.slides
+    / Slide
+    %li.slide
+      / Background
+      .hero.lg.vbottom
+        .bg.faded.parallax{:style => "background-image: url(#{image_path('http://placehold.it/1319x880')});"}
+        .container
+          / Content
+          .content
+            %span.label Updated
+            %h1.lg
+              Tera Slider
+              %sup 3.1
+    / Slide
+    %li.slide.dark
+      / Background
+      .hero.lg.vcenter.vcenter
+        .bg.faded.parallax{:style => "background-image: url(#{image_path('http://placehold.it/1451x968')});"}
+        .container.text-center
+          / Content
+          .content
+            %h1 Creative Digital Agency
+%section
+  .container.content
+    .row
+      .col-md-12
+        .slider
+          %ul.slides
+            / Slide
+            %li.slide
+              %img.item{:alt => "", :src => "#{image_path('http://placehold.it/1440x562')}"}/
+  .container.content
+    .row
+      .col-md-6.col-md-offset-3
+        %blockquote.item Quitters don't win. Winners don't quit.
+  .container.content
+    .row
+      .col-md-4
+        %img.item{:alt => "", :src => "#{image_path('http://placehold.it/400x267')}"}/
+      .col-md-4
+        %img.item{:alt => "", :src => "#{image_path('http://placehold.it/400x267')}"}/
+      .col-md-4
+        %img.item{:alt => "", :src => "#{image_path('http://placehold.it/400x267')}"}/

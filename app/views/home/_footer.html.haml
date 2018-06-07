@@ -1,0 +1,32 @@
+%footer
+  .container.content
+    .row
+      / Contact info
+      .col-md-3
+        %li= link_to "Contact Us", "/pages/contact"
+        %li= link_to "Terms of Use", "/pages/services"
+        %li= link_to "Privacy Policy", "/pages/elements"
+        %li= link_to "How it Works?", "/pages/tera-slider"
+      .col-md-2
+        %p
+          Agency Ltd
+          %br>/
+          Address 123
+          %br>/
+          12345 LA, California
+      .col-md-7.text-right
+        / Social links
+        %ul.social
+          %li
+            %a.fa.fa-twitter{:href => "#"}
+          %li
+            %a.fa.fa-dribbble{:href => "#"}
+          %li
+            %a.fa.fa-facebook{:href => "#"}
+          %li
+            %a.fa.fa-instagram{:href => "#"}
+          %li
+            %a.fa.fa-pinterest{:href => "#"}
+        / Copyright message
+        .copyright
+          %a{:href => "https://github.com/chrisjmendez/boilerplate-rails-5-app"}= "#{Time.now.year} All Right Reserved"
