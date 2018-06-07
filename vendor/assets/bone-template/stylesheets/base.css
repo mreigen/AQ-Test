@@ -26,6 +26,7 @@
 ---*/
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,500,300);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700,900|Playfair+Display:700);
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -54,12 +55,12 @@ a:focus, a:active, a:hover, textarea:focus, textarea:active, textarea:hover, inp
   02. Typography
 ---*/
 body {
-  font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Roboto Mono", sans-serif;
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Roboto Mono", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -69,14 +70,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, .copyright {
+  font-size: 18px;
   font-weight: 300;
-  font-size: 0.95em;
-  line-height: 1.9;
 }
 
 p a, .copyright a {
   font-weight: bold;
-  color: #2E2E2E;
+  color: #222;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  font-weight: bold;
+  color: #222;
+}
+
+li {
+  list-style: none;
+  font-size: 18px;
+  line-height: 2em;
 }
 
 h1 {
@@ -84,7 +99,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Roboto Mono", sans-serif;
   font-size: 2.2em;
   margin: 10px 0 25px;
 }
@@ -97,7 +112,7 @@ h3 {
 h4 {
   font-size: 1.3em;
   margin-bottom: 10px;
-  font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Roboto Mono", sans-serif;
 }
 
 h5 {
@@ -165,6 +180,10 @@ h1.lg {
 #wrapper {
   padding: 0;
   overflow-x: hidden;
+}
+
+.page-wrap {
+  margin-top: 90px;
 }
 
 @media screen and (min-width: 1300px) {
@@ -296,6 +315,8 @@ h1 span.right, h2 span.right, h3 span.right, h4 span.right, h5 span.right, h6 sp
 }
 
 .brand .dark-brand {
+  width: 150px;
+  padding-top: 12px;
   display: block;
 }
 
@@ -340,7 +361,7 @@ h1 span.right, h2 span.right, h3 span.right, h4 span.right, h5 span.right, h6 sp
   top: 0;
   bottom: 0;
   right: -50%;
-  width: 50%;
+  width: 30%;
   height: 100%;
   z-index: 99;
   background: #fff;
@@ -435,7 +456,7 @@ h1 span.right, h2 span.right, h3 span.right, h4 span.right, h5 span.right, h6 sp
 
 .nav-container li a {
   font-size: 1.9em;
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Work Sans", "Lato", "Helvetica Neue", sans-serif;
   font-weight: 500;
   color: #2E2E2E;
   display: inline-block;
@@ -480,7 +501,7 @@ h1 span.right, h2 span.right, h3 span.right, h4 span.right, h5 span.right, h6 sp
 
 .nav-container li ul.dropdown li a {
   padding: 5px;
-  font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Roboto Mono", sans-serif;
   font-size: 13px;
   font-weight: 300;
 }
@@ -1069,10 +1090,10 @@ span.accent {
 }
 
 body .hero {
-  height: 500px;
+  /*height: 500px;
   height: 55vh;
-  min-height: 500px;
-  padding: 120px 0;
+  min-height: 500px;*/
+  padding: 60px 0;
   position: relative;
   overflow: hidden;
 }
@@ -1116,8 +1137,13 @@ body .hero.lg.behind {
 }
 
 body .hero.fs {
-  height: 600px;
-  height: 100vh;
+  /*height: 600px;
+  height: 100vh;*/
+  background-color: beige;
+  background: url(/images/user-bg.svg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 90px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1203,7 +1229,7 @@ img.standalone {
 }
 
 .btn {
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Work Sans", "Lato", "Helvetica Neue", sans-serif;
   border-radius: 0;
   border: 0;
   padding: 12px 25px;
@@ -1410,7 +1436,7 @@ ul.breadcrumbs li:last-child:after {
   font-size: 1.2em;
   line-height: 2;
   font-weight: bold;
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Work Sans", "Lato", "Helvetica Neue", sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -1496,7 +1522,7 @@ blockquote {
   margin-bottom: 10px;
   border: 3px solid rgba(46, 46, 46, 0.1);
   position: relative;
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Work Sans", "Lato", "Helvetica Neue", sans-serif;
   font-size: 1.5em;
 }
 
@@ -1524,7 +1550,7 @@ blockquote:after {
 .label {
   background: #2E2E2E;
   font-size: 1em;
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Work Sans", "Lato", "Helvetica Neue", sans-serif;
   font-weight: 500;
   padding: 4px 8px 5px;
   color: #fff;
@@ -1564,7 +1590,7 @@ blockquote:after {
 }
 
 .tabs .tab-content {
-  font-family: "Roboto Mono", "Helvetica Neue", sans-serif;
+  font-family: "Lato", "Helvetica Neue", "Roboto Mono", sans-serif;
   border: 1px solid #dedede;
   border-top: 0;
   padding: 30px;
@@ -1872,7 +1898,7 @@ blockquote:after {
   top: 25px;
   right: 25px;
   color: #fff;
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Work Sans", "Lato", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 1.2em;
   padding: 11px 20px;
@@ -1985,6 +2011,8 @@ header {
   height: 100px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  background-color: white;
+  box-shadow: 0px 1px 10px #666;
 }
 
 header .brand {
@@ -2054,7 +2082,7 @@ header.affix .cart {
 }
 
 section {
-  padding: 135px 0;
+  padding: 35px 0;
   vertical-align: top;
 }
 
@@ -2104,19 +2132,8 @@ section.on-foot {
 }
 
 footer {
-  margin-top: -290px;
-  padding: 230px 0 100px;
-  background: #f0f0f0;
-}
-
-footer.classic {
-  background: #2E2E2E;
-  padding: 100px 0;
-  margin-top: 0;
-}
-
-footer.classic * {
-  color: #fff !important;
+  padding: 20px 0 20px;
+  background: #f2f2f2;
 }
 
 footer p {
@@ -2214,7 +2231,7 @@ ul.comments li.comment .thumb img {
 
 ul.comments li.comment .author {
   font-weight: bold;
-  font-family: "Work Sans", "Helvetica Neue", sans-serif;
+  font-family: "Work Sans", "Lato", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
 }
 
