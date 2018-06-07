@@ -365,7 +365,7 @@ DEPENDENCIES
   erb2haml
   factory_girl_rails
   faker
-  font-awesome-sass
+  font-awesome-sass (~> 5.0.13)
   guard-livereload
   guard-rspec
   haml-rails (~> 0.9.0)

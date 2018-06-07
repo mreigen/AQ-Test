@@ -180,7 +180,7 @@ gem 'high_voltage'
 gem 'erb2haml', groups: [:development]
 # Font Awesome SASS
 # https://github.com/FortAwesome/font-awesome-sass
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 5.0.13'
 
 
 
