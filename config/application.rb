@@ -6,17 +6,17 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Boilerplate
+module AdQuickTest
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.  
+    # -- all .rb files in that directory are automatically loaded.
 
     # ### ### ### ### ### ### ### ###
     # CUSTOM TEMPLATE FROM VENDOR ASSETS
-    # Description: I wanted to add custom images 
+    # Description: I wanted to add custom images
     #   but keep them tidy within /vendor/assets directory
-    
+
     # http://stackoverflow.com/a/18944657
     config.assets.paths << Rails.root.join("vendor", "assets", "bone-template", "images")
     # http://stackoverflow.com/a/14195512
