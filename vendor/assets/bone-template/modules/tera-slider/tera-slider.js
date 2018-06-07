@@ -31,15 +31,15 @@ Made by Themanoid
         if($sldr.hasClass('multi-slides')){
             $mousePos.x = e.pageX - $offset.left;
             $mousePos.y = e.pageY - $offset.top;
-            if($mousePos.x > $sldr.width()/2) {
-              $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-right-dark.png) 5 -25, e-resize');
-              if($('body').hasClass('dark-hero'))
-                $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-right.png) 5 -25, e-resize');
-            } else {
-              $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-left-dark.png) 5 -25, w-resize');
-              if($('body').hasClass('dark-hero'))
-                $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-left.png) 5 -25, w-resize');
-            }
+            // if($mousePos.x > $sldr.width()/2) {
+            //   $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-right-dark.png) 5 -25, e-resize');
+            //   if($('body').hasClass('dark-hero'))
+            //     $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-right.png) 5 -25, e-resize');
+            // } else {
+            //   $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-left-dark.png) 5 -25, w-resize');
+            //   if($('body').hasClass('dark-hero'))
+            //     $sldr.find('.slides').css('cursor', 'url(/assets/modules/tera-slider/slide-left.png) 5 -25, w-resize');
+            // }
             if($mousePos.y > ($sldr.height() - 15)) {
               $sldr.css('cursor', 'default');
             }
