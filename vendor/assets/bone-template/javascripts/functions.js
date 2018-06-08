@@ -14,6 +14,18 @@
       console.log([boardId, userId]);
       var voteUrl = 'billboards/' + boardId + '/vote?direction=' + voteDirection + '&user_id=' + userId;
       $.post(voteUrl, function(data) {
+        var $downButton = $('.board-id-' + boardId + '.arrow-down');
+        var $upButton = $('.board-id-' + boardId + '.arrow-up');
+
+        // Update vote buttons' CSS
+        if (voteDirection == 'up') {
+          $downButton.css('border-top', '15px solid #626262'); // reset
+          $upButton.css('border-bottom', '15px solid #3fad58');
+        } else {
+          $upButton.css('border-bottom', '15px solid #626262'); // reset
+          $downButton.css('border-top', '15px solid #3fad58');
+        }
+
         alert(data.message);
       }).fail(function(resp) {
         alert(resp.responseJSON.message);
