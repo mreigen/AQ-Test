@@ -2,7 +2,7 @@ class ImportService
   class << self
     def import_billboard_from_csv(path)
       temp_file_name = 'test.csv'
-      file = read_remote_file(path, temp_file_name)
+      file = FileService.read_remote_file(path, temp_file_name)
 
       body = file.read
       body.encode!('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
@@ -20,7 +20,7 @@ class ImportService
         Billboard.create!(creation_hsh)
       end
 
-      delete_temp_file temp_file_name
+      FileService.delete_temp_file(temp_file_name)
     end
 
     def parse_csv_file_content(body)
