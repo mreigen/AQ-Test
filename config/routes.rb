@@ -23,11 +23,11 @@ Rails.application.routes.draw do
   # ## #### ## ## ## ## ## ## ## ## ## ## ##
   # Generic Routes
   #
-  get 'home/index'
+  get '/', to: redirect('sign_up')
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root to: "home#index"
+  # root to: "home#index"
 
   resources :billboards, only: :index
 end
