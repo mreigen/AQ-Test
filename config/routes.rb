@@ -34,4 +34,7 @@ Rails.application.routes.draw do
       post 'vote'
     end
   end
+
+  get 'get_current_user_id' => 'users#get_current_user_id'
+
 end

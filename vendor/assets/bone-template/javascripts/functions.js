@@ -6,6 +6,21 @@
   // CHANGED
   //$('a[href!=#][data-toggle!=tab][target!=_blank][class!=anchor]').addClass('smooth');
 
+  $('.vote-button').on('click', function(e) {
+    var boardId = this.dataset.boardId;
+    var voteDirection = this.dataset.voteDirection;
+    $.get('/get_current_user_id', function(data) {
+      var userId = data.id;
+      console.log([boardId, userId]);
+      var voteUrl = 'billboards/' + boardId + '/vote?direction=' + voteDirection + '&user_id=' + userId;
+      $.post(voteUrl, function(data) {
+        alert(data.message);
+      }).fail(function(resp) {
+        alert(resp.responseJSON.message);
+      });
+    })
+  });
+
   $('.smooth-transition').animsition({
     linkElement: '.smooth',
     inDuration: 500,

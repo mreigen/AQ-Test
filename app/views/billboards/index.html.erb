@@ -10,8 +10,8 @@
           <% @billboards.each do |board| %>
             <div class="board col-lg-4">
               <div class="vote-wrapper">
-                <div class="vote-button arrow-up"></div>
-                <div class="vote-button arrow-down"></div>
+                <div class="vote-button arrow-up board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
+                <div class="vote-button arrow-down board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="down"></div>
               </div>
 
               <div class="image-wrapper"><img src="<%= board.image_url %>"/></div>
