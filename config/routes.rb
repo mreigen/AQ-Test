@@ -29,5 +29,9 @@ Rails.application.routes.draw do
 
   # root to: "home#index"
 
-  resources :billboards, only: :index
+  resources :billboards, only: [:index] do
+    member do
+      post 'vote'
+    end
+  end
 end
