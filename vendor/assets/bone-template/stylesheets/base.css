@@ -2895,7 +2895,8 @@ Made by Themanoid
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 300px;
+  height: 240px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .board img {
@@ -2923,6 +2924,7 @@ VOTE
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 15px solid #626262;
+  margin-bottom: 10px;
 }
 
 .arrow-up:hover {

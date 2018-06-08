@@ -8,15 +8,27 @@
         <div class="container-fluid">
           <div class="row">
           <% @billboards.each do |board| %>
-            <div class="board col-lg-4">
-              <div class="vote-wrapper">
-                <div class="vote-button arrow-up board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
-                <div class="vote-button arrow-down board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="down"></div>
-              </div>
+            <div class="board col-lg-12">
+              <div class="row">
+                <div class="col-lg-1">
+                  <div class="vote-wrapper">
+                    <div class="vote-button arrow-up board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
+                    <div class="vote-button arrow-down board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="down"></div>
+                  </div>
+                </div>
 
-              <div class="image-wrapper"><img src="<%= board.image_url %>"/></div>
-              <h3><%= board.name %></h3>
-              <div><%= board.source %></div>
+                <div class="col-lg-4">
+                  <div class="image-wrapper"><img src="<%= board.image_url %>"/></div>
+                </div>
+
+                <div class="col-lg-3">
+                  <h3><%= board.name %></h3>
+                </div>
+
+                <div class="col-lg-3">
+                  <div><%= board.source %></div>
+                </div>
+              </div> <!-- row -->
             </div>
           <% end %>
           </div>
