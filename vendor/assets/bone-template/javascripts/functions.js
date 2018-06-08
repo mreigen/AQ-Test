@@ -19,11 +19,11 @@
 
         // Update vote buttons' CSS
         if (voteDirection == 'up') {
-          $downButton.css('border-top', '15px solid #626262'); // reset
-          $upButton.css('border-bottom', '15px solid #3fad58');
+          $downButton.removeClass('down-voted'); // reset
+          $upButton.addClass('up-voted');
         } else {
-          $upButton.css('border-bottom', '15px solid #626262'); // reset
-          $downButton.css('border-top', '15px solid #3fad58');
+          $upButton.removeClass('up-voted'); // reset
+          $downButton.addClass('down-voted');
         }
 
         alert(data.message);

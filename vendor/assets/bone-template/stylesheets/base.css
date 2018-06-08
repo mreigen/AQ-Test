@@ -2927,6 +2927,14 @@ VOTE
   margin-bottom: 10px;
 }
 
+.up-voted {
+  border-bottom: 15px solid #3fad58 !important;
+}
+
+.down-voted {
+  border-top: 15px solid #3fad58 !important;
+}
+
 .arrow-up:hover {
   border-bottom: 15px solid #4d4f4e;
   cursor: pointer;

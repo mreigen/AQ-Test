@@ -12,8 +12,9 @@
               <div class="row">
                 <div class="col-lg-1">
                   <div class="vote-wrapper">
-                    <div class="vote-button arrow-up board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
-                    <div class="vote-button arrow-down board-id-<%= board.id %>" data-board-id="<%= board.id %>" data-vote-direction="down"></div>
+                    <div class="vote-button arrow-up board-id-<%= board.id %> <%= (board.users_liked.include?(current_user)) ? 'up-voted' : ''%>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
+
+                    <div class="vote-button arrow-down board-id-<%= board.id %> <%= (board.users_disliked.include?(current_user)) ? 'down-voted' : ''%>" data-board-id="<%= board.id %>" data-vote-direction="down"></div>
                   </div>
                 </div>
 
