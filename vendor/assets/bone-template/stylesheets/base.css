@@ -212,6 +212,7 @@ footer {
 @media screen and (max-width: 992px) {
   .container {
     padding: 0 70px;
+    width: 100%;
   }
 }
 
@@ -2171,6 +2172,7 @@ footer .copyright {
     margin-top: 0;
     padding: 30px 0;
     text-align: center;
+    height: 438px;
   }
   footer .text-right {
     text-align: center;

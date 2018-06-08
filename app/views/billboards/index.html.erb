@@ -1,16 +1,16 @@
 <section>
   <div class="content">
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-10 col-xs-12">
         <div class="intro">
           <h1>All Billboards</h1>
         </div>
         <div class="container-fluid">
           <div class="row">
           <% @billboards.each do |board| %>
-            <div class="board col-lg-12 board-id-<%= board.id %>">
+            <div class="board col-lg-12 col-xs-12 board-id-<%= board.id %>">
               <div class="row">
-                <div class="col-lg-1">
+                <div class="col-lg-1 col-xs-1">
                   <div class="vote-wrapper">
                     <div class="vote-button arrow-up <%= (board.users_liked.include?(current_user)) ? 'up-voted' : ''%>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
 
@@ -20,15 +20,15 @@
                   <div class="vote-count"><%= board.vote_count%></div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-xs-4">
                   <div class="image-wrapper"><img src="<%= board.image_url %>"/></div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-xs-3">
                   <h3><%= board.name %></h3>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-xs-3">
                   <div><%= board.score %></div>
                 </div>
               </div> <!-- row -->
