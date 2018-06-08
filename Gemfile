@@ -216,4 +216,4 @@ gem 'dalli', groups: [:production]
 # App Specific Gems
 # ### ### ### ### ### ### ### ###
 
-
+gem 'acts_as_votable', '~> 0.11.1'
