@@ -20,9 +20,17 @@ class BillboardsController < ApplicationController
     final_message = ''
     begin
       if direction == 'up'
+        if @board.votes_for.up.voters.include?(@user)
+          render json: {message: "Your already up voted this."}, status: :bad_request and return
+        end
+
         @board.liked_by(@user)
         final_message = "You have up voted '#{@board.name}'!"
       elsif direction == 'down'
+        if @board.votes_for.down.voters.include?(@user)
+          render json: {message: "Your already down voted this."}, status: :bad_request and return
+        end
+
         @board.disliked_by(@user)
         final_message = "You have down voted '#{@board.name}'!"
       end
