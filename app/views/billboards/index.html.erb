@@ -8,14 +8,16 @@
         <div class="container-fluid">
           <div class="row">
           <% @billboards.each do |board| %>
-            <div class="board col-lg-12">
+            <div class="board col-lg-12 board-id-<%= board.id %>">
               <div class="row">
                 <div class="col-lg-1">
                   <div class="vote-wrapper">
-                    <div class="vote-button arrow-up board-id-<%= board.id %> <%= (board.users_liked.include?(current_user)) ? 'up-voted' : ''%>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
+                    <div class="vote-button arrow-up <%= (board.users_liked.include?(current_user)) ? 'up-voted' : ''%>" data-board-id="<%= board.id %>" data-vote-direction="up"></div>
 
-                    <div class="vote-button arrow-down board-id-<%= board.id %> <%= (board.users_disliked.include?(current_user)) ? 'down-voted' : ''%>" data-board-id="<%= board.id %>" data-vote-direction="down"></div>
+                    <div class="vote-button arrow-down <%= (board.users_disliked.include?(current_user)) ? 'down-voted' : ''%>" data-board-id="<%= board.id %>" data-vote-direction="down"></div>
                   </div>
+
+                  <div class="vote-count"><%= board.vote_count%></div>
                 </div>
 
                 <div class="col-lg-4">

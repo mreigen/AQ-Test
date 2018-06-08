@@ -48,6 +48,18 @@ a:focus, a:active, a:hover, textarea:focus, textarea:active, textarea:hover, inp
   outline: 0;
 }
 
+@keyframes zoomzoom {
+  0% {
+    transform: scale(.9);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /*---
   01. Fonts
 ---*/
@@ -2936,8 +2948,9 @@ VOTE
 }
 
 .arrow-up:hover {
-  border-bottom: 15px solid #4d4f4e;
+  border-bottom: 15px solid #c5c5c5;
   cursor: pointer;
+  animation: zoomzoom .5s;
 }
 
 .arrow-down {
@@ -2949,11 +2962,21 @@ VOTE
 }
 
 .arrow-down:hover {
-  border-top: 15px solid #4d4f4e;
+  border-top: 15px solid #c5c5c5;
   cursor: pointer;
+  animation: zoomzoom .5s;
 }
 
 .vote-button {
   position: relative;
   float: left;
+}
+
+.vote-count {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 10px auto;
+  font-size: 16px;
+  padding-left: 10px;
 }

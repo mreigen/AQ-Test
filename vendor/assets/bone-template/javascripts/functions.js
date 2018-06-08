@@ -14,16 +14,21 @@
       console.log([boardId, userId]);
       var voteUrl = 'billboards/' + boardId + '/vote?direction=' + voteDirection + '&user_id=' + userId;
       $.post(voteUrl, function(data) {
-        var $downButton = $('.board-id-' + boardId + '.arrow-down');
-        var $upButton = $('.board-id-' + boardId + '.arrow-up');
+        var $boardDiv = $('.board-id-' + boardId);
+        var currentVoteCount = parseInt($boardDiv.find('.vote-count').html());
+
+        var $downButton = $('.board-id-' + boardId + ' .arrow-down');
+        var $upButton = $('.board-id-' + boardId + ' .arrow-up');
 
         // Update vote buttons' CSS
         if (voteDirection == 'up') {
           $downButton.removeClass('down-voted'); // reset
           $upButton.addClass('up-voted');
+          $boardDiv.find('.vote-count').html(currentVoteCount + 1);
         } else {
           $upButton.removeClass('up-voted'); // reset
           $downButton.addClass('down-voted');
+          $boardDiv.find('.vote-count').html(currentVoteCount - 1);
         }
 
         alert(data.message);

@@ -21,6 +21,10 @@ class Billboard < ApplicationRecord
     update_score
   end
 
+  def vote_count
+    self.votes_for.size
+  end
+
   private
 
   def update_score
