@@ -18,7 +18,7 @@ class BillboardsController < ApplicationController
     end
 
     final_message = ''
-    # begin
+    begin
       if direction == 'up'
         if @board.users_liked.include?(@user)
           render json: {message: "Your already up voted this."}, status: :bad_request and return
@@ -34,10 +34,13 @@ class BillboardsController < ApplicationController
         @board.set_disliked_by(@user)
         final_message = "You have down voted '#{@board.name}'!"
       end
-    # rescue => e
+    rescue => e
       # if there is any wrong with the vote saving
-      # render json: {message: 'Oops. There is something wrong while saving the vote. Our team has notified.'}, status: :unprocessable_entity and return
-    # end
+      render json: {message: 'Oops. There is something wrong while saving the vote. Our team has notified.'}, status: :unprocessable_entity and return
+
+      # I would log this to RollBar
+      # Rollbar.error('blah')
+    end
 
     render json: {message: "Thank you. #{final_message}"}
   end
