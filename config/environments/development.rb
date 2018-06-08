@@ -51,20 +51,20 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  
+
 
   # CHANGED - LiveReload
   # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
-  config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
+  # config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
   # or, if you're using better_errors:
   # config.middleware.insert_before Rack::Lock, Rack::LiveReload
 
-  
+
   #CHANGED - Devise - Added :confirmable to Devise using http://mailgun.com
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp  
-  config.action_mailer.perform_deliveries = true  
-  config.action_mailer.raise_delivery_errors = true 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.smtp_settings = {
     # Add your personal credentials through .env
     :address   => ENV['EMAIL_SERVICE_SMTP'],

@@ -141,7 +141,7 @@ gem 'guard-livereload', require: false, groups: [:development]
 # Auto refresh the browser w/o a Chrome plug-in
 # https://github.com/johnbintz/rack-livereload
 # Config: config/environments/development.rb
-gem "rack-livereload", group: [:development]
+# gem "rack-livereload", group: [:development]
 
 # Factory Girl for fixture replatement
 # https://github.com/thoughtbot/factory_girl_rails
