@@ -1,14 +1,19 @@
 <section>
   <div class="content">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-10">
         <div class="intro">
-          <h3>All Billboards</h3>
+          <h1>All Billboards</h1>
         </div>
         <div class="container-fluid">
           <div class="row">
           <% @billboards.each do |board| %>
             <div class="board col-lg-4">
+              <div class="vote-wrapper">
+                <div class="vote-button arrow-up"></div>
+                <div class="vote-button arrow-down"></div>
+              </div>
+
               <div class="image-wrapper"><img src="<%= board.image_url %>"/></div>
               <h3><%= board.name %></h3>
               <div><%= board.source %></div>

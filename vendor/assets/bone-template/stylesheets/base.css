@@ -2903,5 +2903,47 @@ Made by Themanoid
 }
 
 .board .image-wrapper {
-  height: 180px;
+  height: 240px;
+  margin-bottom: 10px;
+  max-height: 200px;
+  display: flex;
+}
+
+/*
+VOTE
+*/
+.vote-wrapper {
+  position: relative;
+  margin: 20px auto;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #626262;
+}
+
+.arrow-up:hover {
+  border-bottom: 15px solid #4d4f4e;
+  cursor: pointer;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #626262;
+}
+
+.arrow-down:hover {
+  border-top: 15px solid #4d4f4e;
+  cursor: pointer;
+}
+
+.vote-button {
+  position: relative;
+  float: left;
 }
