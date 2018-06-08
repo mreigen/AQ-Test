@@ -184,6 +184,11 @@ h1.lg {
 
 .page-wrap {
   margin-top: 90px;
+  min-height: 68vh;
+}
+
+footer {
+  height: 210px;
 }
 
 @media screen and (min-width: 1300px) {
